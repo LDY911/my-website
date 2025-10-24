@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/me.png"
+  avatar           : "profile.png"
   name             : "Dongyang Li"
   pronouns         : # example: "she/her"  
   bio              : "A PhD student focused on social recommendation and causal reasoning."
