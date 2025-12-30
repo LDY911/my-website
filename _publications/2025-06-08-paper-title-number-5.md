@@ -1,5 +1,5 @@
 ---
-title: "Paper Title Number 5, with math $$E=mc^2$$"
+title: "Disentangling the Factors Driving Friendship Formation: An LLM-Enhanced Graph Convolutional Approach for Friend Recommendation"
 collection: publications
 category: conferences
 permalink: /publication/2024-02-17-paper-title-number-4
