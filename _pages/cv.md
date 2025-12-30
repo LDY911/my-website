@@ -17,14 +17,19 @@ Education
   
 Skills
 ======
-* Skill 1
+* Methods
+  * Deep Learning Methods: Graph Neural Networks, Reinforcement Learning, Multi-Agent Learning, Disentangled Representation Learning, Contrastive Learning, Curriculum Learning, Knowledge Graphs
+  * Empirical Methods: Regression Analysis, Difference-in-Differences, Event Study, T-Test
 * Code
-  * python
-  * JAVA
-  * Html
-* Skill 3
+  * Python
+  * PyTorch, TensorFlow
+  * SQL, Bash, Html, JSON
+  * LLM-Oriented Programming
 
 
-Service and leadership
+Interests
 ======
-* Currently signed in to 43 different slack teams
+* Traveling
+* Badminton
+* Reading history books
+* Good food
