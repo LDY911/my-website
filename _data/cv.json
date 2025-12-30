@@ -51,7 +51,7 @@
       "courses": []
     }
   ],
-  "skills": [],
+  "skills": [a, b, c],
   "languages": [],
   "interests": [],
   "references": [],
