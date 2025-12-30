@@ -1,5 +1,5 @@
 ---
-title: "Paper Title Number 3"
+title: "Independent or Social Driven Decision? A Counterfactual Refinement Strategy for Graph-Based Social Recommendation"
 collection: publications
 category: manuscripts
 permalink: /publication/2015-10-01-paper-title-number-3
