@@ -7,7 +7,7 @@ author_profile: true
 
 <section class="publication-page-intro">
   <p class="section-kicker">Selected published work</p>
-  <p>My current publications focus on social recommendation, causal graph refinement, dynamic information diffusion, and LLM-enhanced friend recommendation. Each entry below includes the formal publication record, a compact method schematic, and a short explanation of the research contribution.</p>
+  <p>My current publications focus on social recommendation, causal graph refinement, dynamic information diffusion, and LLM-enhanced friend recommendation. Each entry below includes the formal publication record, the paper's model figure when publicly available, and a short explanation of the research contribution.</p>
 </section>
 
 <article class="publication-feature">
@@ -20,16 +20,6 @@ author_profile: true
       <a href="https://doi.org/10.1145/3717830">DOI</a>
       <a href="https://github.com/LDY911/CFRSSR-Code">Code</a>
     </div>
-  </div>
-
-  <div class="model-diagram counterfactual-diagram" aria-label="Counterfactual social recommendation method diagram">
-    <div class="diagram-step">Observed social graph<br><span>friends, ratings, interactions</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Counterfactual question<br><span>would the user still choose it?</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Causal friend influence<br><span>useful ties vs noisy ties</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Refined graph<br><span>better social recommendation</span></div>
   </div>
 
   <h3>What the paper does</h3>
@@ -49,17 +39,10 @@ author_profile: true
     </div>
   </div>
 
-  <div class="model-diagram feddgl-diagram" aria-label="FedDGL dynamic graph learning method diagram">
-    <div class="diagram-step">Cascade snapshots<br><span>time-slotted diffusion</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Micro + macro features<br><span>node and graph dynamics</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Dynamic graph encoder<br><span>feature-driven embedding</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Temporal + similar cascades<br><span>BiLSTM and auto-encoder</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Popularity prediction<br><span>adaptive fusion</span></div>
-  </div>
+  <figure class="paper-figure paper-figure--wide">
+    <img src="/images/publications/feddgl-figure-1.png" alt="Framework of the proposed FedDGL model">
+    <figcaption>Framework of the proposed FedDGL model.</figcaption>
+  </figure>
 
   <h3>What the paper does</h3>
   <p>This paper addresses popularity prediction in social media, where the goal is to estimate how large an information cascade will become after observing its early diffusion process. Earlier approaches often emphasize either generative temporal processes, such as Hawkes-style diffusion models, or static graph representations of a cascade. The limitation is that real diffusion is dynamic at two levels at once: individual nodes change their local spreading roles over time, while the whole cascade also develops macroscopic shape, speed, and structural signals.</p>
@@ -78,17 +61,10 @@ author_profile: true
     </div>
   </div>
 
-  <div class="model-diagram dffr-diagram" aria-label="LLM-enhanced personality-disentangled friend recommendation diagram">
-    <div class="diagram-step">User text<br><span>posts and profile signals</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">LLM personality inference<br><span>Big Five traits</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Personality subgraphs<br><span>trait-specific social views</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Graph link prediction<br><span>GCN / SEAL style learning</span></div>
-    <div class="diagram-arrow">-></div>
-    <div class="diagram-step">Attention + implicit factors<br><span>friend recommendation</span></div>
-  </div>
+  <figure class="paper-figure paper-figure--center">
+    <img src="/images/publications/dffr-figure-2.png" alt="Overview of the DFFR model">
+    <figcaption>Overview of the DFFR model.</figcaption>
+  </figure>
 
   <h3>What the paper does</h3>
   <p>This paper studies friend recommendation from a deeper social-behavioral angle. Many friend recommendation systems rely on homophily: users who share visible characteristics, behaviors, or network neighborhoods are more likely to connect. The paper argues that this is incomplete because friendship formation also depends on less visible personality mechanisms. Two users may look similar on the surface but form, maintain, or avoid friendship for different reasons tied to openness, conscientiousness, extraversion, agreeableness, and emotional stability.</p>

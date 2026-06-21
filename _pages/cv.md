@@ -24,7 +24,7 @@ Skills
   * Python
   * PyTorch, TensorFlow
   * SQL, Bash, Html, JSON
-  * LLM-Oriented Programming
+  * vibe coding
 
 
 Interests

@@ -146,50 +146,45 @@
   }
 }
 
-.model-diagram {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.65rem;
-  align-items: stretch;
+.paper-figure {
+  display: block;
   margin: 1.35rem 0 1.45rem;
-  padding: 1rem;
+  padding: 0.85rem;
   border: 1px solid var(--global-border-color);
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(50, 96, 82, 0.08), rgba(123, 77, 32, 0.06));
-}
-
-.feddgl-diagram,
-.dffr-diagram {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.diagram-step {
-  display: flex;
-  min-height: 5.8rem;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.7rem;
-  border: 1px solid rgba(55, 65, 81, 0.18);
-  border-radius: 7px;
-  background: rgba(255, 255, 255, 0.78);
-  color: #1f2933;
-  font-size: $type-size-7;
-  font-weight: 700;
-  line-height: 1.3;
+  background: #fff;
   text-align: center;
 
-  span {
+  img {
     display: block;
-    margin-top: 0.35rem;
-    color: #52616b;
-    font-size: 0.72rem;
-    font-weight: 600;
-    line-height: 1.35;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 6px;
+  }
+
+  figcaption {
+    display: block;
+    width: 100%;
+    margin: 0.75rem 0 0;
+    clear: both;
+    color: var(--global-text-color-light);
+    font-size: $type-size-7;
+    line-height: 1.4;
   }
 }
 
-.diagram-arrow {
-  display: none;
+.paper-figure--center img {
+  width: min(100%, 720px);
+}
+
+.publication-feature .paper-figure {
+  display: block !important;
+}
+
+.publication-feature .paper-figure--center img {
+  width: min(100%, 720px) !important;
+  max-width: 720px !important;
 }
 
 .publication-feature h3 {
@@ -207,13 +202,9 @@
     grid-template-columns: 1fr;
   }
 
-  .model-diagram,
-  .feddgl-diagram,
-  .dffr-diagram {
-    grid-template-columns: 1fr;
-  }
-
-  .diagram-step {
-    min-height: auto;
+  .paper-figure {
+    margin-right: -0.25rem;
+    margin-left: -0.25rem;
+    padding: 0.5rem;
   }
 }
