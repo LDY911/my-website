@@ -1,31 +1,96 @@
 ---
 layout: archive
+title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
 
-{% include base_path %}
+<section class="publication-page-intro">
+  <p class="section-kicker">Selected published work</p>
+  <p>My current publications focus on social recommendation, causal graph refinement, dynamic information diffusion, and LLM-enhanced friend recommendation. Each entry below includes the formal publication record, a compact method schematic, and a short explanation of the research contribution.</p>
+</section>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<article class="publication-feature">
+  <div class="publication-header">
+    <p class="publication-tag">Journal Article / ACM TOIS 2025</p>
+    <h2>Independent or Social Driven Decision? A Counterfactual Refinement Strategy for Graph-Based Social Recommendation</h2>
+    <p class="publication-authors"><strong>Dongyang Li</strong>, Jianshan Sun, Chongming Gao, Fuli Feng, Kun Yuan</p>
+    <p class="publication-venue"><em>ACM Transactions on Information Systems</em>, 43(3), Article 76, pp. 1-27, 2025.</p>
+    <div class="publication-links">
+      <a href="https://doi.org/10.1145/3717830">DOI</a>
+      <a href="https://github.com/LDY911/CFRSSR-Code">Code</a>
+    </div>
+  </div>
 
+  <div class="model-diagram counterfactual-diagram" aria-label="Counterfactual social recommendation method diagram">
+    <div class="diagram-step">Observed social graph<br><span>friends, ratings, interactions</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Counterfactual question<br><span>would the user still choose it?</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Causal friend influence<br><span>useful ties vs noisy ties</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Refined graph<br><span>better social recommendation</span></div>
+  </div>
 
+  <h3>What the paper does</h3>
+  <p>This paper starts from a practical weakness in graph-based social recommendation: a social edge is not automatically useful evidence for preference prediction. Some users make decisions independently, some are strongly shaped by friends, and many observed social ties are redundant or noisy. The paper reframes this problem through counterfactual reasoning. Instead of asking only whether two users are connected, it asks whether a friend's purchase behavior causally changes the target user's likely choice. That counterfactual question makes it possible to distinguish genuine social influence from superficial homophily or incidental network proximity.</p>
+  <p>The proposed refinement strategy uses causal inference to generate counterfactual purchase behavior and then refines the social graph at multiple granularities. In effect, the model tries to keep social relations that carry useful behavioral influence and weaken the links that merely add noise. This refined graph can then be plugged into different social recommendation backbones, improving prediction without requiring a completely new recommender architecture. The contribution is both methodological and conceptual: it treats social recommendation as a mechanism-discovery problem, not just a graph aggregation problem.</p>
+</article>
 
+<article class="publication-feature">
+  <div class="publication-header">
+    <p class="publication-tag">Journal Article / World Wide Web 2025</p>
+    <h2>Combining Macro and Micro: Feature-Driven Dynamic Graph Learning for Social Media Popularity Prediction</h2>
+    <p class="publication-authors">Yashen Wang, <strong>Dongyang Li</strong>, Jianshan Sun, Yuan Kun, Yinan Jiang, Yin Zhang, Jie Cao</p>
+    <p class="publication-venue"><em>World Wide Web</em>, 28(1), Article 18, 2025.</p>
+    <div class="publication-links">
+      <a href="https://doi.org/10.1007/s11280-024-01323-x">DOI</a>
+      <a href="https://github.com/LDY911/FedDGL_twitter">Code</a>
+    </div>
+  </div>
+
+  <div class="model-diagram feddgl-diagram" aria-label="FedDGL dynamic graph learning method diagram">
+    <div class="diagram-step">Cascade snapshots<br><span>time-slotted diffusion</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Micro + macro features<br><span>node and graph dynamics</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Dynamic graph encoder<br><span>feature-driven embedding</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Temporal + similar cascades<br><span>BiLSTM and auto-encoder</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Popularity prediction<br><span>adaptive fusion</span></div>
+  </div>
+
+  <h3>What the paper does</h3>
+  <p>This paper addresses popularity prediction in social media, where the goal is to estimate how large an information cascade will become after observing its early diffusion process. Earlier approaches often emphasize either generative temporal processes, such as Hawkes-style diffusion models, or static graph representations of a cascade. The limitation is that real diffusion is dynamic at two levels at once: individual nodes change their local spreading roles over time, while the whole cascade also develops macroscopic shape, speed, and structural signals.</p>
+  <p>FedDGL is designed around that macro-micro distinction. It first divides the observation window into time slots and extracts microscopic node-level features together with macroscopic cascade-level features. A feature-driven dynamic graph learning strategy then builds node and cascade representations that preserve fine-grained diffusion dynamics. The model further uses temporal learning to capture how the cascade evolves and a popularity-supervised auto-encoder to retrieve similar historical cascades as references. The final prediction fuses these two views. The result is a popularity prediction framework that is more sensitive to diffusion mechanisms than a static graph model and more generalizable than treating each cascade as an isolated case.</p>
+</article>
+
+<article class="publication-feature">
+  <div class="publication-header">
+    <p class="publication-tag">Conference Paper / HICSS 2025</p>
+    <h2>Disentangling the Factors Driving Friendship Formation: An LLM-Enhanced Graph Convolutional Approach for Friend Recommendation</h2>
+    <p class="publication-authors"><strong>Dongyang Li</strong>, Yuhan Wu, Jianshan Sun, Yuanchun Jiang</p>
+    <p class="publication-venue"><em>Proceedings of the 58th Hawaii International Conference on System Sciences</em>, pp. 630-639, 2025.</p>
+    <div class="publication-links">
+      <a href="https://doi.org/10.24251/HICSS.2025.075">DOI</a>
+      <a href="https://hdl.handle.net/10125/108912">Open Access</a>
+    </div>
+  </div>
+
+  <div class="model-diagram dffr-diagram" aria-label="LLM-enhanced personality-disentangled friend recommendation diagram">
+    <div class="diagram-step">User text<br><span>posts and profile signals</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">LLM personality inference<br><span>Big Five traits</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Personality subgraphs<br><span>trait-specific social views</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Graph link prediction<br><span>GCN / SEAL style learning</span></div>
+    <div class="diagram-arrow">-></div>
+    <div class="diagram-step">Attention + implicit factors<br><span>friend recommendation</span></div>
+  </div>
+
+  <h3>What the paper does</h3>
+  <p>This paper studies friend recommendation from a deeper social-behavioral angle. Many friend recommendation systems rely on homophily: users who share visible characteristics, behaviors, or network neighborhoods are more likely to connect. The paper argues that this is incomplete because friendship formation also depends on less visible personality mechanisms. Two users may look similar on the surface but form, maintain, or avoid friendship for different reasons tied to openness, conscientiousness, extraversion, agreeableness, and emotional stability.</p>
+  <p>The proposed DFFR model uses large language models to infer Big Five personality traits from user text, then partitions the social graph into multiple personality-driven subgraphs. Each subgraph represents a different behavioral channel through which friendship may form. Graph convolution and link prediction are performed within these disentangled views, and a shared attention layer learns how much each personality trait contributes to a predicted friendship. The model also keeps an implicit representation to capture non-personality factors, since not all social ties can be explained by text-derived traits. The contribution is an interpretable friend recommendation framework: it does not only predict that two users may become friends, but also provides a structured way to reason about which personality-related mechanisms may be driving the connection.</p>
+</article>
