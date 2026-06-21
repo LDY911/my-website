@@ -40,20 +40,26 @@ redirect_from:
 <section class="home-section">
   <h2>Selected Work</h2>
   <div class="selected-work">
-    <article>
-      <span>ACM TOIS 2025</span>
-      <h3>Counterfactual refinement for graph-based social recommendation</h3>
-      <p>A causal approach for identifying whether friends actually influence user choices and using that signal to refine noisy social graphs.</p>
-    </article>
-    <article>
-      <span>World Wide Web 2025</span>
-      <h3>Feature-driven dynamic graph learning for cascade popularity prediction</h3>
-      <p>A dynamic graph model that combines microscopic node-level diffusion patterns with macroscopic cascade-level features.</p>
-    </article>
-    <article>
-      <span>HICSS 2025</span>
-      <h3>LLM-enhanced friend recommendation through personality disentanglement</h3>
-      <p>A model that uses LLM-derived personality traits to partition social graphs and explain different paths to friendship formation.</p>
-    </article>
+    <a class="selected-work-card" href="/publications/#tois-2025">
+      <article>
+        <span>ACM TOIS 2025</span>
+        <h3>Counterfactual refinement for graph-based social recommendation</h3>
+        <p>A causal approach for identifying whether friends actually influence user choices and using that signal to refine noisy social graphs.</p>
+      </article>
+    </a>
+    <a class="selected-work-card" href="/publications/#www-2025">
+      <article>
+        <span>World Wide Web 2025</span>
+        <h3>Feature-driven dynamic graph learning for cascade popularity prediction</h3>
+        <p>A dynamic graph model that combines microscopic node-level diffusion patterns with macroscopic cascade-level features.</p>
+      </article>
+    </a>
+    <a class="selected-work-card" href="/publications/#hicss-2025">
+      <article>
+        <span>HICSS 2025</span>
+        <h3>LLM-enhanced friend recommendation through personality disentanglement</h3>
+        <p>A model that uses LLM-derived personality traits to partition social graphs and explain different paths to friendship formation.</p>
+      </article>
+    </a>
   </div>
 </section>

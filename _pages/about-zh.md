@@ -37,20 +37,26 @@ alternate_url: /
 <section class="home-section">
   <h2>代表性工作</h2>
   <div class="selected-work">
-    <article>
-      <span>ACM TOIS 2025</span>
-      <h3>面向图社会化推荐的反事实关系精炼</h3>
-      <p>从因果角度识别朋友是否真正影响用户选择，并用该信号精炼带噪声的社交图。</p>
-    </article>
-    <article>
-      <span>World Wide Web 2025</span>
-      <h3>用于级联流行度预测的特征驱动动态图学习</h3>
-      <p>同时建模微观节点扩散行为和宏观级联结构特征，提升社交媒体信息传播预测。</p>
-    </article>
-    <article>
-      <span>HICSS 2025</span>
-      <h3>基于人格解耦的大语言模型增强朋友推荐</h3>
-      <p>利用大语言模型推断人格特征，划分人格驱动的子图，并解释不同朋友关系形成机制。</p>
-    </article>
+    <a class="selected-work-card" href="/zh/publications/#tois-2025">
+      <article>
+        <span>ACM TOIS 2025</span>
+        <h3>面向图社会化推荐的反事实关系精炼</h3>
+        <p>从因果角度识别朋友是否真正影响用户选择，并用该信号精炼带噪声的社交图。</p>
+      </article>
+    </a>
+    <a class="selected-work-card" href="/zh/publications/#www-2025">
+      <article>
+        <span>World Wide Web 2025</span>
+        <h3>用于级联流行度预测的特征驱动动态图学习</h3>
+        <p>同时建模微观节点扩散行为和宏观级联结构特征，提升社交媒体信息传播预测。</p>
+      </article>
+    </a>
+    <a class="selected-work-card" href="/zh/publications/#hicss-2025">
+      <article>
+        <span>HICSS 2025</span>
+        <h3>基于人格解耦的大语言模型增强朋友推荐</h3>
+        <p>利用大语言模型推断人格特征，划分人格驱动的子图，并解释不同朋友关系形成机制。</p>
+      </article>
+    </a>
   </div>
 </section>
