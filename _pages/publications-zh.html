@@ -1,0 +1,79 @@
+---
+layout: archive
+title: "论文"
+permalink: /zh/publications/
+author_profile: true
+lang: zh
+alternate_url: /publications/
+---
+
+<section class="publication-page-intro">
+  <p class="section-kicker">已发表代表作</p>
+  <p>我的论文主要围绕社会化推荐、因果图精炼、动态信息扩散和大语言模型增强的朋友推荐展开。下面每篇论文都包含正式出版信息、论文中的模型结构图，以及对研究问题和方法贡献的简要说明。</p>
+</section>
+
+<article class="publication-feature">
+  <div class="publication-header">
+    <p class="publication-tag">期刊论文 / ACM TOIS 2025</p>
+    <h2>Independent or Social Driven Decision? A Counterfactual Refinement Strategy for Graph-Based Social Recommendation</h2>
+    <p class="publication-authors"><strong>Dongyang Li</strong>, Jianshan Sun, Chongming Gao, Fuli Feng, Kun Yuan</p>
+    <p class="publication-venue"><em>ACM Transactions on Information Systems</em>, 43(3), Article 76, pp. 1-27, 2025.</p>
+    <div class="publication-links">
+      <a href="https://doi.org/10.1145/3717830">DOI</a>
+      <a href="https://github.com/LDY911/CFRSSR-Code">代码</a>
+    </div>
+  </div>
+
+  <figure class="paper-figure paper-figure--wide">
+    <img src="/images/publications/tois-figure-1.png" alt="识别购买行为中社会影响的示例">
+    <figcaption>图 1. 识别购买行为中社会影响的示例。</figcaption>
+  </figure>
+
+  <h3>这篇论文做了什么</h3>
+  <p>这篇论文关注图社会化推荐中的一个核心问题：社交边并不天然等于有用的推荐信号。有些用户更偏向独立决策，有些用户更容易受到朋友影响，而观察到的社交关系中也存在大量冗余或噪声。论文用反事实视角重新定义这个问题：不只是问两个用户是否相连，而是进一步问，如果朋友没有购买某个商品，目标用户是否仍然会购买它。这个问题使模型能够区分真正的社会影响、表面上的同质性以及偶然的网络邻近。</p>
+  <p>方法上，论文通过因果推断生成反事实购买行为，并在不同粒度上精炼社交图。直观地说，模型会保留真正携带行为影响的社交关系，削弱只是增加噪声的关系。精炼后的图可以接入不同社会化推荐骨干模型，从而在不完全重写推荐架构的情况下提升预测表现。这篇论文的贡献不仅是一个方法模块，也是一种问题视角：它把社会化推荐看作机制识别问题，而不仅是图聚合问题。</p>
+</article>
+
+<article class="publication-feature">
+  <div class="publication-header">
+    <p class="publication-tag">期刊论文 / World Wide Web 2025</p>
+    <h2>Combining Macro and Micro: Feature-Driven Dynamic Graph Learning for Social Media Popularity Prediction</h2>
+    <p class="publication-authors">Yashen Wang, <strong>Dongyang Li</strong>, Jianshan Sun, Yuan Kun, Yinan Jiang, Yin Zhang, Jie Cao</p>
+    <p class="publication-venue"><em>World Wide Web</em>, 28(1), Article 18, 2025.</p>
+    <div class="publication-links">
+      <a href="https://doi.org/10.1007/s11280-024-01323-x">DOI</a>
+      <a href="https://github.com/LDY911/FedDGL_twitter">代码</a>
+    </div>
+  </div>
+
+  <figure class="paper-figure paper-figure--wide">
+    <img src="/images/publications/feddgl-figure-1.png" alt="FedDGL 模型框架">
+    <figcaption>FedDGL 模型框架。</figcaption>
+  </figure>
+
+  <h3>这篇论文做了什么</h3>
+  <p>这篇论文研究社交媒体流行度预测，即在观察到早期扩散过程后，预测一条信息级联最终会传播到多大规模。既有方法往往偏向两类思路：一类强调 Hawkes 过程等时间扩散机制，另一类把级联看成静态图进行表征学习。问题在于，真实扩散同时发生在两个层面：单个节点的局部传播角色会随时间变化，整个级联的宏观形态、速度和结构信号也在不断演化。</p>
+  <p>FedDGL 围绕“宏观-微观”这一关系来设计。模型先把观察窗口划分为多个时间片，同时提取节点级微观特征和级联级宏观特征，再用特征驱动的动态图学习策略构建节点和级联表征。随后，模型通过时间学习刻画级联演化，并利用流行度监督的自编码器检索相似历史级联作为参考。最终预测融合这两类信息。因此，它比静态图模型更能捕捉扩散机制，也比把每个级联孤立处理的方法更具泛化性。</p>
+</article>
+
+<article class="publication-feature">
+  <div class="publication-header">
+    <p class="publication-tag">会议论文 / HICSS 2025</p>
+    <h2>Disentangling the Factors Driving Friendship Formation: An LLM-Enhanced Graph Convolutional Approach for Friend Recommendation</h2>
+    <p class="publication-authors"><strong>Dongyang Li</strong>, Yuhan Wu, Jianshan Sun, Yuanchun Jiang</p>
+    <p class="publication-venue"><em>Proceedings of the 58th Hawaii International Conference on System Sciences</em>, pp. 630-639, 2025.</p>
+    <div class="publication-links">
+      <a href="https://doi.org/10.24251/HICSS.2025.075">DOI</a>
+      <a href="https://hdl.handle.net/10125/108912">开放获取</a>
+    </div>
+  </div>
+
+  <figure class="paper-figure paper-figure--center">
+    <img src="/images/publications/dffr-figure-2.png" alt="DFFR 模型概览">
+    <figcaption>DFFR 模型概览。</figcaption>
+  </figure>
+
+  <h3>这篇论文做了什么</h3>
+  <p>这篇论文从更深层的社会行为机制出发研究朋友推荐。很多朋友推荐系统依赖同质性假设：可见特征、行为或网络邻域相似的用户更可能建立关系。论文指出，这种解释并不充分，因为朋友关系的形成还可能受到更隐性的个性机制影响。两个用户表面上看起来相似，但他们建立、维持或回避朋友关系的原因，可能与开放性、责任心、外向性、宜人性和情绪稳定性等人格维度有关。</p>
+  <p>DFFR 使用大语言模型从用户文本中推断 Big Five 人格特征，然后把社交图划分为多个人格驱动的子图。每个子图代表一种潜在的朋友关系形成通道。模型在这些解耦视角中进行图卷积和链接预测，并通过共享注意力层学习不同人格因素对预测朋友关系的贡献。同时，模型保留隐式表征来捕捉非人格因素，因为并非所有社交关系都能由文本推断的人格特征解释。其贡献在于提供了一种可解释的朋友推荐框架：不仅预测谁可能成为朋友，还能结构化地解释哪些人格相关机制可能在发挥作用。</p>
+</article>

@@ -2,6 +2,8 @@
 permalink: /
 title: "Research Profile"
 author_profile: true
+lang: en
+alternate_url: /zh/
 redirect_from:
   - /about/
   - /about.html
